@@ -36,7 +36,3 @@ def game_handler_post(request):
     if username == None or username == '' or password == None or password == '':
         request.redirect("/") #Says that the user is missing a feild
         return
-    if 
-    
-    
-
