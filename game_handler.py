@@ -32,7 +32,10 @@ def game_handler(request):
 """)
 
 def game_handler_post(request):
-
-    if username == None or username == '' or password == None or password == '':
-        request.redirect("/") #Says that the user is missing a feild
-        return
+	username = request.get_field("username")
+	category = request.get_field("category")
+	difficulty = request.get_field("difficulty")
+	
+    if username is None or category is None or difficulty is None:
+        request.redirect("/")
+    
